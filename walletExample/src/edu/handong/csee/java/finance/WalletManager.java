@@ -1,5 +1,5 @@
 package edu.handong.csee.java.finance;
-
+/* 주석입니다. */
 public class WalletManager {
     private boolean isActive;
     private String name;
