@@ -15,14 +15,19 @@ public class Wallet{
     }
 
     public void insert(int amountToInsert) {
+        if(isOpening != true) {
+            System.out.println("Your wallet is closed. Now we open!");
+            open();
+        }
         amount = amount + amountToInsert;
     }
     public void takeOut(int amountToTakeOut) {
         if(isOpening != true) {
-            System.out.println("open");
+            System.out.println("Your wallet is closed. Now we open!");
+            open();
         }
         if(amountToTakeOut > amount) {
-            System.out.println("take");
+            System.out.println("Not enough money in the Wallet");
             return;
         }
         amount = amount - amountToTakeOut;

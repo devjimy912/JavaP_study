@@ -17,7 +17,9 @@ public class Executor {//이것도 하나의 객체임.
 
 	public void run(String[] args) {
 		WalletManager jc = new WalletManager();
+		jc.setName("JC Nam");
 		WalletManager jh = new WalletManager();
+		jh.setName("JH Park");
 
 		Wallet jcWallet = new Wallet();
 		Wallet jhWallet = new Wallet();
@@ -27,6 +29,12 @@ public class Executor {//이것도 하나의 객체임.
 		
 		jc.setWallet(jcWallet);
 		jh.setWallet(jhWallet);
+
+		jcWallet.takeOut(1000);
+		jhWallet.takeOut(2000);
+
+		jc.checkMyAmount();
+		jh.checkMyAmount();
 	}
 
 }

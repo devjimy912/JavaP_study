@@ -16,7 +16,7 @@ public class WalletManager {
         myWallet = wallet;
     }
     public void checkMyAmount(){
-      System.out.println(name + " has " + amoumt + " now !");
+      System.out.println(name + " has " + myWallet.getAmount() + " now !");
     }
     public String getName() {
        return name;
